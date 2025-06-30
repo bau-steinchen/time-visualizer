@@ -1,0 +1,29 @@
+{
+  "name": "time-visualizer",
+  "version": "0.0.1",
+  "description": "Small hobby Project for a time visual projekt organisation",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bau-steinchen/time-visualizer.git"
+  },
+  "keywords": [
+    "node",
+    "ejs",
+    "mongodb",
+    "auth",
+    "time"
+  ],
+  "author": "bau-steinchen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bau-steinchen/time-visualizer/issues"
+  },
+  "homepage": "https://github.com/bau-steinchen/time-visualizer#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.7"
+  }
+}

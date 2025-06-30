@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>Hallo <%= user.name %>!</h1>
+
+  <h2>Zeiteintrag hinzufügen</h2>
+  <form action="/dashboard/new" method="POST">
+    <input type="text" name="taskLabel" placeholder="Projekt/Tätigkeit" required>
+    <input type="datetime-local" name="start" required>
+    <input type="datetime-local" name="end" required>
+    <button type="submit">Eintragen</button>
+  </form>
+
+  <h2>Deine letzten Einträge</h2>
+  <ul>
+    <% for (const entry of entries) { %>
+      <li>
+        <b><%= entry.taskLabel %></b>:
+        <%= new Date(entry.start).toLocaleString() %> –
+        <%= new Date(entry.end).toLocaleString() %>
+      </li>
+    <% } %>
+  </ul>
+
+  <p><a href="/profile">Zum Profil</a></p>
+</body>
+</html>
